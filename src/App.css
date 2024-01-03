@@ -1,0 +1,81 @@
+/* App.css */
+
+body {
+  background-color: #1a1a1a; /* Dark background color */
+  color: #ffffff; /* Light text color */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+}
+
+/* Header.css */
+
+header {
+  background-color: #333; /* Dark header background color */
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 2em;
+  padding: 20px;
+}
+
+p {
+  margin: 10px 0 0;
+  color: #ddd; /* Light text color for subtitle */
+}
+
+#animatedText {
+  margin-right: 70px;
+}
+
+img {
+  margin: 70px;
+}
+
+
+/* About.css */
+
+#about {
+  padding: 50px;
+}
+
+/* Projects.css */
+
+#projects {
+  background-color: #444; /* Dark project section background color */
+  padding: 50px;
+}
+
+/* Contact.css */
+
+#contact {
+  padding: 50px;
+}
+
+#contactus {
+  padding: 50px;
+}
+/* Footer.css */
+
+footer {
+  background-color: #333; /* Dark footer background color */
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* NavBar.css */
+
+#navbar {
+  width: 30%;
+}
