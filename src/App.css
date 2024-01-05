@@ -16,11 +16,11 @@ body {
 
 header {
   background-color: #333; /* Dark header background color */
-  padding: 20px;
+  padding-top: 20px;
 }
 
 h1 {
-  font-size: 2em;
+  margin-left: 73px;
 }
 
 h2 {
@@ -38,7 +38,7 @@ p {
 }
 
 img {
-  margin: 70px;
+  margin-top: 70px;
 }
 
 

@@ -16,9 +16,9 @@ const Header = () => {
     <header class='h-screen'>
 
 
-      <div class='flex flex-row items-center justify-center'>
-        <section id='animatedText'>
-          <h1 class="flex-auto text-3xl font-bold">Hi 👋, I'm Hitesh Choudhary</h1>
+      <div class='md:flex items-center justify-center'>
+        <section id='animatedText' class="inline-block">
+          <h1 class="lg:text-3xl md:text-2xl text-xl">Hi 👋, I'm Hitesh Choudhary</h1>
           <TypeAnimation
             sequence={[
               // Same substring at the start will only be typed out once, initially
@@ -40,20 +40,21 @@ const Header = () => {
             ]}
             wrapper="span"
             speed={20}
-            style={{ fontSize: '2em', display: 'inline-block' }}
+            className='lg:text-3xl md:text-2xl text-xl'
+            style={{ display: 'inline-block', marginLeft: '73px' }}
             repeat={Infinity}
           />
           {/* Add navigation links if needed */}
         </section>
-        <div class='z-0'>
+        <section class='inline-block z-0'>
           <Image 
             src={Logo} 
-            class="flex-auto" 
-            width='450' 
-            height='530' 
+            class='flex flex-col'
+            radius='lg' 
+            width='330'
             alt="Hitesh Choudhary" 
           />
-        </div> 
+        </section> 
       </div>
     </header>
   );

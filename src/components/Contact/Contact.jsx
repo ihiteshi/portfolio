@@ -45,34 +45,37 @@ export const Contact = () => {
         <div className="flex w-full flex-col md:flex-nowrap gap-4">
           <form ref={form} onSubmit={sendEmail}>
           <div class="flex flex-col gap-4">
-            <div class="flex gap-4">
+            <div class="flex gap-4 z-0">
               <input type="hidden" name="contact_number" value={count} />
               <Input 
               type="text"
               name="name"
               label="Name"
-              placeholder="Enter your name"
+              placeholder="Full name"
             />
               <Input
               type="email"
               name="email"
               label="Email"
-              placeholder="Enter your email"
+              placeholder="Email address"
             />
+            </div>
+            <div class="flex gap-4 z-0">
               <Input
               type="tel"
               label="Phone"
               name="phone"
-              placeholder="Enter your phone number"
+              placeholder="Mobile number"
             />
               <Input 
               type="text"
               label="Company"
               name="company"
-              placeholder="Enter your company name"
+              placeholder="Company name"
             />
             </div>
 
+            <div class="z-0">
               <Textarea 
             isRequired
             type="text"
@@ -81,6 +84,7 @@ export const Contact = () => {
             placeholder="What's on your mind?"
             className=""
             />
+            </div>
 
             <Button 
             radius="full" 
@@ -91,10 +95,10 @@ export const Contact = () => {
             </Button>
           </div>
           </form>
-      <div class="flex mt-2 p-2">
+      <div class="flex mt-2">
         <a 
           class="flex-auto"
-          href="https://www.facebook.com/hiiteshh/"
+          href="https://www.facebook.com/hiiteshh"
           rel="noreferrer"
           target="_blank"
         >
@@ -102,7 +106,7 @@ export const Contact = () => {
         </a>
          <a
           class="flex-auto"
-          href="https://www.instagram.com/imhiteshc/"
+          href="https://www.instagram.com/imhiteshc"
           rel="noreferrer"
           target="_blank"
           >

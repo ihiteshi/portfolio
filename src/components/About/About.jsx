@@ -14,10 +14,10 @@ import { FaFacebookSquare } from "react-icons/fa";
 
 const About = () => {
   return (
-    <section id="about" class="h-screen">
+    <section id="about" class="lg:h-screen">
       <h2>About Me</h2>
       <p>
-      I am a dynamic and results-driven professional with a passion for technology and a proven track record in software support and network administration. Operating seamlessly across diverse operating systems, including MacOS, Windows, and Linux, I have honed my skills in C#.Net, Java, Python 3.0, JavaScript ES6, HTML5, and CSS3.
+      I am a dynamic and results-driven professional with a passion for technology and a proven track record in software engineering and network administration. Operating seamlessly across diverse operating systems, including MacOS, Windows, and Linux, I have honed my skills in C#.Net, Java, Python 3.0, JavaScript ES6, HTML5, and CSS3.
       </p>
       <div class="flex p-4">
       <RiReactjsLine class="flex-auto" size="150px"color='#cacfcc'/>
