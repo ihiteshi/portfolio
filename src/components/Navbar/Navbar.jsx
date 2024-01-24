@@ -1,22 +1,27 @@
 import React from "react";
 import {Tabs, Tab} from "@nextui-org/react"; 
+import { Route, Routes, useLocation } from "react-router-dom";
+import Home from "../Home/Home";
+import About from "../About/About";
+import Contact from "../Contact/Contact";
     
 const NavBar = () => {
-    const [selected, setSelected] = React.useState("about");
+    //const [selected, setSelected] = React.useState("home");
+    const {pathname} = useLocation();
   return (
         <div className="flex fixed flex-wrap gap-4 z-10">
             <Tabs  
                 color="default" 
-                aria-label="Tabs colors" 
+                aria-label="NavBar" 
                 radius="sm"
                 variant="solid"
-                selectedKey={selected}
-                onSelectionChange={setSelected}
+                selectedKey={pathname}
+                //onSelectionChange={setSelected}
             >
-                <Tab key="home" title="Home"/>
-                <Tab key="about" title="About"/>
-                <Tab key="projects" title="Projects"/>
-                <Tab key="contact" title="Contact"/>
+                <Tab id="/" title="Home" href="/" />
+                <Tab id="/about" title="About" href="/about" />
+                <Tab id="/projects" title="Projects" href="/projects" />
+                <Tab id="/contact" title="Contact" href="/contact" />
             </Tabs>
         </div>
   ); 

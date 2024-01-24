@@ -95,7 +95,7 @@ export const Contact = () => {
             </Button>
           </div>
           </form>
-      <div class="flex mt-2">
+      <div class="flex flex-row">
         <a 
           class="flex-auto"
           href="https://www.facebook.com/hiiteshh"

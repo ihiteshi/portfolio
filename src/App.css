@@ -12,16 +12,15 @@ body {
   text-align: center;
 }
 
-/* Header.css */
+/* Home.css */
 
 header {
   background-color: #333; /* Dark header background color */
-  padding-top: 20px;
 }
 
-h1 {
+/*h1 {
   margin-left: 73px;
-}
+}*/
 
 h2 {
   font-size: 2em;
@@ -36,11 +35,6 @@ p {
 #animatedText {
   margin-right: 70px;
 }
-
-img {
-  margin-top: 70px;
-}
-
 
 /* About.css */
 

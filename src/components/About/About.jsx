@@ -14,15 +14,17 @@ import { FaFacebookSquare } from "react-icons/fa";
 
 const About = () => {
   return (
-    <section id="about" class="lg:h-screen">
+    <section id="about">
       <h2>About Me</h2>
       <p>
       I am a dynamic and results-driven professional with a passion for technology and a proven track record in software engineering and network administration. Operating seamlessly across diverse operating systems, including MacOS, Windows, and Linux, I have honed my skills in C#.Net, Java, Python 3.0, JavaScript ES6, HTML5, and CSS3.
       </p>
       <div class="flex p-4">
-      <RiReactjsLine class="flex-auto" size="150px"color='#cacfcc'/>
+      <RiReactjsLine class="flex-auto" size="150px" color='#cacfcc'/>
       <RiJavascriptLine class="flex-auto" size="150px"color='#cacfcc'/>
       <FaPython class="flex-auto mt-2" size="130px"color='#cacfcc'/>
+      </div>
+      <div class="flex p-4">
       <FaNode class="flex-auto p-3" size="150px"color='#cacfcc'/>
       <SiDotnet class="flex-auto p-3 mt-2" size="150px"color='#cacfcc'/>
       </div>
@@ -48,7 +50,6 @@ const About = () => {
       <SiAmazonaws class="flex-auto p-3 mt-2" size="150px"color='#cacfcc' />
       <SiGit class="flex-auto p-3 mt-2" size="150px"color='#cacfcc' />
       </div>
-      {/* Add more about yourself */}
     </section>
   );
 };
