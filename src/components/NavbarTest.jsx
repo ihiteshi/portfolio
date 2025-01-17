@@ -5,14 +5,14 @@ import About from "./About/About";
 import Contact from "./Contact/Contact";
 
 function AppTabs() {
-  const {pathname} = useLocation("/");
+  const {pathname} = useLocation("home");
 
   return (
     <div className="flex flex-col gap-2">
       <Tabs selectedKey={pathname} aria-label="Tabs">
         <Tab id="/" href="/" title="Home" />
-        <Tab id="/about" href="/about" title="About" />
-        <Tab id="/contact" href="/contact" title="Contact" />
+        <Tab id="about" href="#about" title="About" />
+        <Tab id="contact" href="#contact" title="Contact" />
       </Tabs>
       <Routes>
         <Route path="/" element={<Home />} />

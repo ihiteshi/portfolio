@@ -45,7 +45,7 @@ export const Contact = () => {
         <div className="flex w-full flex-col md:flex-nowrap gap-4">
           <form ref={form} onSubmit={sendEmail}>
           <div class="flex flex-col gap-4">
-            <div class="flex gap-4 z-0">
+            <div class="flex gap-4">
               <input type="hidden" name="contact_number" value={count} />
               <Input 
               type="text"

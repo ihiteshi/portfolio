@@ -18,10 +18,9 @@ const NavBar = () => {
                 selectedKey={pathname}
                 //onSelectionChange={setSelected}
             >
-                <Tab id="/" title="Home" href="/" />
-                <Tab id="/about" title="About" href="/about" />
-                <Tab id="/projects" title="Projects" href="/projects" />
-                <Tab id="/contact" title="Contact" href="/contact" />
+                <Tab id="/" title="Home" href="#home" />
+                <Tab id="/about" title="About" href="#about" />
+                <Tab id="/contact" title="Contact" href="#contact" />
             </Tabs>
         </div>
   ); 

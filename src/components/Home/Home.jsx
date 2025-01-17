@@ -5,7 +5,8 @@ import React from 'react';
 import Logo from '../../assets/IMG_1517.PNG';
 import { TypeAnimation } from 'react-type-animation';
 import NavBar from '../Navbar/Navbar'
-import {Image} from "@nextui-org/react";
+import NavBarTest from '../NavbarTest'
+import {Image, Navbar} from "@nextui-org/react";
 import Footer from '../Footer/Footer';
 
 // h-screen flex flex-row items-center justify-center 
