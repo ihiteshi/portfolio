@@ -30,7 +30,9 @@ export default function Footer() {
       }`}
     >
       <div className="container mx-auto px-4 text-center">
-        <p class="lg:text-2xl">© 2025 Hitesh Choudhary. All rights reserved.</p>
+        <p class="lg:text-2xl">
+          © {new Date().getFullYear()} Hitesh Choudhary. All rights reserved.
+        </p>
       </div>
     </footer>
   );
