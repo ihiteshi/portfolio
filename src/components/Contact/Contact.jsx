@@ -43,7 +43,10 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" class="h-screen justify-items-center content-center">
+    <section
+      id="contact"
+      class="h-screen flex flex-col items-center justify-center"
+    >
       <h2 class="lg:text-5xl">Get in touch for a chat</h2>
       <div className="lg:w-1/2 md:w-3/4 gap-4">
         <form ref={form} onSubmit={sendEmail}>

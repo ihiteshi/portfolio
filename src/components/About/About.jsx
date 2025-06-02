@@ -14,9 +14,12 @@ import { FaFacebookSquare } from "react-icons/fa";
 
 const About = () => {
   return (
-    <section id="about" class="lg:h-screen justify-items-center content-center">
-      <div class="lg:w-4/5">
-        <h2 class="lg:text-5xl">About Me</h2>
+    <section
+      id="about"
+      className="lg:h-screen flex items-center justify-center"
+    >
+      <div className="lg:w-4/5">
+        <h2 className="lg:text-5xl">About Me</h2>
         <p class="lg:text-2xl">
           I am a dynamic and results-driven professional with a passion for
           technology and a proven track record in software engineering and
