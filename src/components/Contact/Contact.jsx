@@ -103,46 +103,52 @@ export const Contact = () => {
           </div>
         </form>
       </div>
-      <div class="flex flex-row lg:w-1/2 md:w-3/4 w-full pt-4">
-        <a
-          class="flex-auto"
-          href="https://www.facebook.com/hiiteshh"
-          rel="noreferrer"
-          target="_blank"
-        >
-          <FaFacebookSquare size="60px" color="#cacfcc" />
-        </a>
-        <a
-          class="flex-auto"
-          href="https://www.instagram.com/imhiteshc"
-          rel="noreferrer"
-          target="_blank"
-        >
-          <FaInstagramSquare size="60px" color="#cacfcc" />
-        </a>
-        <a
-          class="flex-auto"
-          href="https://wa.me/+610450625800"
-          rel="noreferrer"
-          target="_blank"
-        >
-          <FaWhatsappSquare size="60px" color="#cacfcc" />
-        </a>
-        <a
-          class="flex-auto"
-          href="https://github.com/ihiteshi"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <FaGithubSquare size="60px" color="#cacfcc" />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/hitesh-choudhary-62386b10a/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <FaLinkedin size="60px" color="#cacfcc" />
-        </a>
+      <div className="flex flex-row lg:w-1/2 md:w-3/4 w-full pt-4 justify-between">
+        <span>
+          <a
+            href="https://www.facebook.com/hiiteshh"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <FaFacebookSquare size="60px" color="#cacfcc" />
+          </a>
+        </span>
+        <span>
+          <a
+            href="https://www.instagram.com/imhiteshc"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <FaInstagramSquare size="60px" color="#cacfcc" />
+          </a>
+        </span>
+        <span>
+          <a
+            href="https://wa.me/+610450625800"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <FaWhatsappSquare size="60px" color="#cacfcc" />
+          </a>
+        </span>
+        <span>
+          <a
+            href="https://github.com/ihiteshi"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaGithubSquare size="60px" color="#cacfcc" />
+          </a>
+        </span>
+        <span>
+          <a
+            href="https://www.linkedin.com/in/hitesh-choudhary-62386b10a/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaLinkedin size="60px" color="#cacfcc" />
+          </a>
+        </span>
       </div>
       {/* Add a contact form or your contact information */}
     </section>
