@@ -69,7 +69,15 @@ const About = () => {
             rel="noreferrer"
             target="_blank"
           >
-            Microsoft Azure Fundamentals
+            Microsoft Azure Fundamentals,
+          </a>{" "}
+          <a
+            href="https://learn.microsoft.com/api/credentials/share/en-gb/HiteshChoudhary-6988/1ABA1FDAAF5D3D2?sharingId=A18D1B0E32272AC0"
+            className="underline"
+            rel="noreferrer"
+            target="_blank"
+          >
+            Azure AI Fundamentals
           </a>{" "}
           and skilled in{" "}
           <a
@@ -78,10 +86,10 @@ const About = () => {
             rel="noreferrer"
             target="_blank"
           >
-            Microsoft Power BI Data Analyst
+            Power BI
           </a>
-          , I bring a comprehensive understanding of cloud computing and data
-          analytics to the table.
+          , I bring a comprehensive understanding of cloud computing, artificial
+          intelligence, machine learning and data analytics to the table.
         </p>
         <div className="flex p-2 flex-wrap justify-center gap-4">
           <SiMicrosoftazure
