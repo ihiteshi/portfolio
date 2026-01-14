@@ -24,20 +24,11 @@ const Home = () => {
               sequence={[
                 // Same substring at the start will only be typed out once, initially
                 1000,
-                " Network Administrator",
-                1000,
-                " Web Designer",
-                1000,
                 " FullStack Developer",
                 1000,
-                " React Developer",
-                1000, // wait 1s before replacing "Mice" with "Hamsters"
-                " .NET Developer",
+                " Data Engineer",
                 1000,
-                " Python Developer",
-                1000,
-                " Data Analyst",
-                1000,
+                " Network Administrator",
               ]}
               wrapper="span"
               speed={20}

@@ -30,6 +30,22 @@ const About = () => {
           including MacOS, Windows, and Linux, I have honed my skills in C#.Net,
           Java, Python 3.0, JavaScript ES6, HTML5, and CSS3.
         </p>
+        <p className="text-base sm:text-lg lg:text-2xl text-center break-words mb-4 px-2">
+          Recently, my career focus has shifted toward data engineering and
+          analytics, driven by hands-on experience building end-to-end data
+          solutions. In my current role, I work across the full data lifecycle —
+          extracting and cleaning complex datasets from multiple sources,
+          structuring and storing data in scalable formats, and building
+          reliable ETL workflows to ensure accuracy, timeliness, and data
+          quality. I also design and implement Power BI reports and dashboards
+          that turn raw data into clear, actionable insights for
+          decision-making. This combination of software engineering fundamentals
+          and practical data engineering experience allows me to understand both
+          how systems are built and how data needs to flow to deliver real
+          business value. I enjoy solving complex problems with clean,
+          maintainable solutions and continuously learning better ways to make
+          data work for people.
+        </p>
         <div className="flex p-2 flex-wrap justify-center gap-4">
           <RiReactjsLine
             className="flex-auto w-16 h-16 sm:w-24 sm:h-24 lg:w-[150px] lg:h-[150px]"
@@ -56,9 +72,8 @@ const About = () => {
         </div>
         <p className="text-base sm:text-lg lg:text-2xl text-center break-words mb-4 px-2">
           My educational background includes a Master's degree in Information
-          Technology from Queensland University of Technology, where I
-          specialized in network management, coupled with a Bachelor's degree in
-          Computer Application from Jain University, focusing on mobile
+          Technology from Queensland University of Technology, coupled with a
+          Bachelor's degree in Computer Application, focusing on mobile
           application development and computer security.
         </p>
         <p className="text-base sm:text-lg lg:text-2xl text-center break-words mb-4 px-2">
@@ -89,7 +104,7 @@ const About = () => {
             Power BI
           </a>
           , I bring a comprehensive understanding of cloud computing, artificial
-          intelligence, machine learning and data analytics to the table.
+          intelligence, software development and data analytics to the table.
         </p>
         <div className="flex p-2 flex-wrap justify-center gap-4">
           <SiMicrosoftazure

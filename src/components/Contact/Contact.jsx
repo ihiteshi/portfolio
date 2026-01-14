@@ -106,6 +106,24 @@ export const Contact = () => {
       <div className="flex flex-row lg:w-1/2 md:w-3/4 w-full pt-4 justify-between">
         <span>
           <a
+            href="https://www.linkedin.com/in/hitesh-choudhary-62386b10a/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaLinkedin size="60px" color="#cacfcc" />
+          </a>
+        </span>
+        <span>
+          <a
+            href="https://github.com/ihiteshi"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaGithubSquare size="60px" color="#cacfcc" />
+          </a>
+        </span>
+        <span>
+          <a
             href="https://www.facebook.com/hiiteshh"
             rel="noreferrer"
             target="_blank"
@@ -129,24 +147,6 @@ export const Contact = () => {
             target="_blank"
           >
             <FaWhatsappSquare size="60px" color="#cacfcc" />
-          </a>
-        </span>
-        <span>
-          <a
-            href="https://github.com/ihiteshi"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaGithubSquare size="60px" color="#cacfcc" />
-          </a>
-        </span>
-        <span>
-          <a
-            href="https://www.linkedin.com/in/hitesh-choudhary-62386b10a/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaLinkedin size="60px" color="#cacfcc" />
           </a>
         </span>
       </div>
