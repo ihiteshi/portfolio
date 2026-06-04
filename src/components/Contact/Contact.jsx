@@ -19,13 +19,30 @@ const SOCIALS = [
 const inputClass =
   'w-full rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-white placeholder-white/30 outline-none transition-colors focus:border-accent-from/60';
 
+// Persistent submission-counter worker (see worker/README.md). Optional:
+// if unset or unreachable, the form still sends, just without a count.
+const COUNTER_URL = import.meta.env.VITE_COUNTER_URL;
+
 const Contact = () => {
   const form = useRef();
+  const countField = useRef();
   const [status, setStatus] = useState(null); // 'sending' | 'ok' | 'error'
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
     setStatus('sending');
+
+    // Best-effort: bump the persistent counter and embed the new total so
+    // EmailJS includes it in the email. Never block the send if it fails.
+    if (COUNTER_URL && countField.current) {
+      try {
+        const res = await fetch(COUNTER_URL, { method: 'POST' });
+        if (res.ok) countField.current.value = String((await res.json()).count);
+      } catch {
+        /* counter unavailable — send the email anyway */
+      }
+    }
+
     emailjs
       .sendForm('contact_service', 'contact_form', form.current, 'YaPMLOMlIl9l4YzFx')
       .then(
@@ -48,6 +65,7 @@ const Contact = () => {
         </p>
 
         <form ref={form} onSubmit={sendEmail} data-reveal className="flex flex-col gap-4">
+          <input type="hidden" name="contact_number" ref={countField} />
           <div className="grid gap-4 sm:grid-cols-2">
             <input className={inputClass} type="text" name="name" placeholder="Full name" required />
             <input className={inputClass} type="email" name="email" placeholder="Email address" required />

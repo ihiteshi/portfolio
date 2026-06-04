@@ -1,0 +1,10 @@
+name = "portfolio-contact-counter"
+main = "index.js"
+compatibility_date = "2025-01-01"
+
+# KV namespace that stores the running submission total.
+# Replace the id below with the one printed by:
+#   npx wrangler kv namespace create COUNTER
+[[kv_namespaces]]
+binding = "COUNTER"
+id = "REPLACE_WITH_YOUR_KV_NAMESPACE_ID"
