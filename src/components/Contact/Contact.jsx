@@ -23,6 +23,11 @@ const inputClass =
 // if unset or unreachable, the form still sends, just without a count.
 const COUNTER_URL = import.meta.env.VITE_COUNTER_URL;
 
+// EmailJS config (all values are public/client-side by design).
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
 const Contact = () => {
   const form = useRef();
   const countField = useRef();
@@ -44,7 +49,7 @@ const Contact = () => {
     }
 
     emailjs
-      .sendForm('contact_service', 'contact_form', form.current, 'YaPMLOMlIl9l4YzFx')
+      .sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form.current, EMAILJS_PUBLIC_KEY)
       .then(
         () => {
           setStatus('ok');
