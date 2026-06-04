@@ -1,24 +1,24 @@
 import {
-  FaFacebookSquare,
-  FaInstagramSquare,
-  FaWhatsappSquare,
-  FaLinkedin,
-  FaGithubSquare,
-} from 'react-icons/fa';
+  FaLinkedinIn,
+  FaGithub,
+  FaFacebookF,
+  FaInstagram,
+  FaWhatsapp,
+} from 'react-icons/fa6';
 
 const SOCIALS = [
-  { Icon: FaLinkedin, href: 'https://www.linkedin.com/in/hitesh-choudhary-62386b10a/', label: 'LinkedIn' },
-  { Icon: FaGithubSquare, href: 'https://github.com/ihiteshi', label: 'GitHub' },
-  { Icon: FaFacebookSquare, href: 'https://www.facebook.com/hiiteshh', label: 'Facebook' },
-  { Icon: FaInstagramSquare, href: 'https://www.instagram.com/imhiteshc', label: 'Instagram' },
-  { Icon: FaWhatsappSquare, href: 'https://wa.me/+610450625800', label: 'WhatsApp' },
+  { Icon: FaLinkedinIn, href: 'https://www.linkedin.com/in/hitesh-choudhary-62386b10a/', label: 'LinkedIn' },
+  { Icon: FaGithub, href: 'https://github.com/ihiteshi', label: 'GitHub' },
+  { Icon: FaFacebookF, href: 'https://www.facebook.com/hiiteshh', label: 'Facebook' },
+  { Icon: FaInstagram, href: 'https://www.instagram.com/imhiteshc', label: 'Instagram' },
+  { Icon: FaWhatsapp, href: 'https://wa.me/+610450625800', label: 'WhatsApp' },
 ];
 
 const Footer = () => {
   return (
     <footer className="border-t border-white/10 py-10">
       <div className="section-shell flex flex-col items-center gap-6">
-        <div className="flex gap-6">
+        <div className="flex gap-4">
           {SOCIALS.map(({ Icon, href, label }) => (
             <a
               key={label}
@@ -26,9 +26,9 @@ const Footer = () => {
               target="_blank"
               rel="noreferrer"
               aria-label={label}
-              className="text-white/60 transition-all hover:scale-110 hover:text-white"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-white/60 transition-all hover:scale-110 hover:border-white/25 hover:bg-white/[0.06] hover:text-white"
             >
-              <Icon size="32px" />
+              <Icon size="18px" />
             </a>
           ))}
         </div>
