@@ -7,4 +7,4 @@ compatibility_date = "2025-01-01"
 #   npx wrangler kv namespace create COUNTER
 [[kv_namespaces]]
 binding = "COUNTER"
-id = "REPLACE_WITH_YOUR_KV_NAMESPACE_ID"
+id = "b6dda8e015364e3f81997a0144649161"
