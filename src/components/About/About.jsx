@@ -1,124 +1,31 @@
-// components/About.js
-
-import React from "react";
-import { RiReactjsLine } from "react-icons/ri";
-import { RiJavascriptLine } from "react-icons/ri";
-import { FaPython } from "react-icons/fa";
-import { SiDotnet } from "react-icons/si";
-import { SiPowerbi } from "react-icons/si";
-import { FaNode } from "react-icons/fa";
-import { SiMicrosoftazure } from "react-icons/si";
-import { SiAmazonaws } from "react-icons/si";
-import { SiGit } from "react-icons/si";
-import { FaFacebookSquare } from "react-icons/fa";
-
 const About = () => {
   return (
-    <section
-      id="about"
-      className="min-h-screen flex items-center justify-center px-2" // add px-2 for mobile padding
-    >
-      <div className="w-full max-w-4xl">
-        {" "}
-        {/* responsive width */}
-        <h2 className="text-3xl lg:text-5xl text-center mb-4">About Me</h2>
-        <p className="text-base sm:text-lg lg:text-2xl text-center break-words mb-4 px-2">
-          {/* break-words and px-2 for mobile, text size responsive */}I am a
-          dynamic and results-driven professional with a passion for technology
-          and a proven track record in software engineering and network
-          administration. Operating seamlessly across diverse operating systems,
-          including MacOS, Windows, and Linux, I have honed my skills in C#.Net,
-          Java, Python 3.0, JavaScript ES6, HTML5, and CSS3.
-        </p>
-        <p className="text-base sm:text-lg lg:text-2xl text-center break-words mb-4 px-2">
-          Recently, my career focus has shifted toward data engineering and
-          analytics, driven by hands-on experience building end-to-end data
-          solutions. In my current role, I work across the full data lifecycle —
-          extracting and cleaning complex datasets from multiple sources,
-          structuring and storing data in scalable formats, and building
-          reliable ETL workflows to ensure accuracy, timeliness, and data
-          quality. I also design and implement Power BI reports and dashboards
-          that turn raw data into clear, actionable insights for
-          decision-making. This combination of software engineering fundamentals
-          and practical data engineering experience allows me to understand both
-          how systems are built and how data needs to flow to deliver real
-          business value. I enjoy solving complex problems with clean,
-          maintainable solutions and continuously learning better ways to make
-          data work for people.
-        </p>
-        <div className="flex p-2 flex-wrap justify-center gap-4">
-          <RiReactjsLine
-            className="flex-auto w-16 h-16 sm:w-24 sm:h-24 lg:w-[150px] lg:h-[150px]"
-            color="#cacfcc"
-          />
-          <RiJavascriptLine
-            className="flex-auto w-16 h-16 sm:w-24 sm:h-24 lg:w-[150px] lg:h-[150px]"
-            color="#cacfcc"
-          />
-          <FaPython
-            className="flex-auto w-14 h-14 sm:w-20 sm:h-20 mt-2 lg:w-[130px] lg:h-[130px]"
-            color="#cacfcc"
-          />
-        </div>
-        <div className="flex p-2 flex-wrap justify-center gap-4">
-          <FaNode
-            className="flex-auto w-16 h-16 sm:w-24 sm:h-24 p-2 lg:w-[150px] lg:h-[150px]"
-            color="#cacfcc"
-          />
-          <SiDotnet
-            className="flex-auto w-16 h-16 sm:w-24 sm:h-24 p-2 mt-2 lg:w-[150px] lg:h-[150px]"
-            color="#cacfcc"
-          />
-        </div>
-        <p className="text-base sm:text-lg lg:text-2xl text-center break-words mb-4 px-2">
-          My educational background includes a Master's degree in Information
-          Technology from Queensland University of Technology, coupled with a
-          Bachelor's degree in Computer Application, focusing on mobile
-          application development and computer security.
-        </p>
-        <p className="text-base sm:text-lg lg:text-2xl text-center break-words mb-4 px-2">
-          Certified in{" "}
-          <a
-            href="https://learn.microsoft.com/en-us/users/hiteshchoudhary-6988/credentials/5e0930dedf32d1a1"
-            className="underline"
-            rel="noreferrer"
-            target="_blank"
-          >
-            Microsoft Azure Fundamentals,
-          </a>{" "}
-          <a
-            href="https://learn.microsoft.com/api/credentials/share/en-gb/HiteshChoudhary-6988/1ABA1FDAAF5D3D2?sharingId=A18D1B0E32272AC0"
-            className="underline"
-            rel="noreferrer"
-            target="_blank"
-          >
-            Azure AI Fundamentals
-          </a>{" "}
-          and skilled in{" "}
-          <a
-            href="https://learn.microsoft.com/en-us/users/hiteshchoudhary-6988/credentials/33275301692cc018"
-            className="underline"
-            rel="noreferrer"
-            target="_blank"
-          >
-            Power BI
-          </a>
-          , I bring a comprehensive understanding of cloud computing, artificial
-          intelligence, software development and data analytics to the table.
-        </p>
-        <div className="flex p-2 flex-wrap justify-center gap-4">
-          <SiMicrosoftazure
-            className="flex-auto w-16 h-16 sm:w-24 sm:h-24 lg:w-[150px] lg:h-[150px] p-2 mt-2"
-            color="#cacfcc"
-          />
-          <SiAmazonaws
-            className="flex-auto w-16 h-16 sm:w-24 sm:h-24 lg:w-[150px] lg:h-[150px] p-2 mt-2"
-            color="#cacfcc"
-          />
-          <SiGit
-            className="flex-auto w-16 h-16 sm:w-24 sm:h-24 lg:w-[150px] lg:h-[150px] p-2 mt-2"
-            color="#cacfcc"
-          />
+    <section id="about" className="flex min-h-screen items-center py-24">
+      <div className="section-shell">
+        <h2 data-reveal className="mb-10 text-center text-3xl font-bold lg:text-5xl">
+          About <span className="gradient-text">Me</span>
+        </h2>
+        <div className="mx-auto max-w-3xl space-y-6 text-base leading-relaxed text-white/70 sm:text-lg">
+          <p data-reveal>
+            I am a dynamic and results-driven professional with a passion for technology
+            and a proven track record in software engineering and network administration.
+            Operating seamlessly across diverse operating systems, including MacOS, Windows,
+            and Linux, I have honed my skills in C#.Net, Java, Python 3.0, JavaScript ES6,
+            HTML5, and CSS3.
+          </p>
+          <p data-reveal>
+            Recently, my career focus has shifted toward data engineering and analytics,
+            driven by hands-on experience building end-to-end data solutions. In my current
+            role, I work across the full data lifecycle — extracting and cleaning complex
+            datasets from multiple sources, structuring and storing data in scalable formats,
+            and building reliable ETL workflows to ensure accuracy, timeliness, and data
+            quality. I also design and implement Power BI reports and dashboards that turn raw
+            data into clear, actionable insights for decision-making. This combination of
+            software engineering fundamentals and practical data engineering experience allows
+            me to understand both how systems are built and how data needs to flow to deliver
+            real business value. I enjoy solving complex problems with clean, maintainable
+            solutions and continuously learning better ways to make data work for people.
+          </p>
         </div>
       </div>
     </section>
