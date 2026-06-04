@@ -13,16 +13,40 @@ const Navbar = () => {
 
   useEffect(() => {
     const sections = LINKS.map((l) => document.getElementById(l.id)).filter(Boolean);
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) setActive(entry.target.id);
-        });
-      },
-      { rootMargin: '-45% 0px -45% 0px' }
-    );
-    sections.forEach((s) => observer.observe(s));
-    return () => observer.disconnect();
+    if (!sections.length) return;
+
+    let ticking = false;
+    const update = () => {
+      ticking = false;
+      // Active = the last section whose top has crossed a reference line near
+      // the top of the viewport. Deterministic, so it can't get "stuck".
+      const line = window.innerHeight * 0.35;
+      let current = sections[0].id;
+      for (const sec of sections) {
+        if (sec.getBoundingClientRect().top <= line) current = sec.id;
+      }
+      // At the very bottom, the last section may be too short to reach the
+      // line — force it active so the final link always highlights.
+      if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 2) {
+        current = sections[sections.length - 1].id;
+      }
+      setActive((prev) => (prev === current ? prev : current));
+    };
+
+    const onScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
+      }
+    };
+
+    update();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+    };
   }, []);
 
   return (
