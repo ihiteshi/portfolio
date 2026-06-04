@@ -14,22 +14,30 @@ gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 function App() {
   // Reveal-on-scroll for any element tagged with data-reveal.
+  // Under reduced-motion we still fade elements in (just no movement), so the
+  // page never feels static — we only drop the large translate/loop motion.
   useGSAP(() => {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const els = gsap.utils.toArray('[data-reveal]');
 
-    const reveals = gsap.utils.toArray('[data-reveal]');
-    reveals.forEach((el) => {
-      gsap.from(el, {
-        opacity: 0,
-        y: 40,
-        duration: 0.8,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: el,
-          start: 'top 85%',
-        },
-      });
+    // Set the hidden start state from JS so content stays visible if JS fails.
+    gsap.set(els, { opacity: 0, y: reduce ? 0 : 60 });
+
+    ScrollTrigger.batch(els, {
+      start: 'top 88%',
+      once: true,
+      onEnter: (batch) =>
+        gsap.to(batch, {
+          opacity: 1,
+          y: 0,
+          duration: reduce ? 0.45 : 0.9,
+          ease: 'power3.out',
+          stagger: 0.12,
+          overwrite: true,
+        }),
     });
+
+    ScrollTrigger.refresh();
   });
 
   return (

@@ -38,6 +38,20 @@
   .section-shell {
     @apply mx-auto w-full max-w-5xl px-6 sm:px-8;
   }
+
+  .type-cursor {
+    animation: cursor-blink 1s step-end infinite;
+  }
+}
+
+@keyframes cursor-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 
 /* Respect users who prefer reduced motion: GSAP also checks this, but ensure

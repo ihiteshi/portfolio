@@ -1,7 +1,10 @@
 import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import { TextPlugin } from 'gsap/TextPlugin';
 import profile from '../../assets/hiteshprofile.webp';
+
+gsap.registerPlugin(TextPlugin);
 
 const ROLES = ['Full-Stack Developer', 'Data Engineer', 'Network Administrator'];
 
@@ -13,40 +16,38 @@ const Hero = () => {
     () => {
       const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-      // Intro timeline
+      // Intro: always fade in. Add upward movement only when motion is allowed.
       const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
-      if (reduce) {
-        gsap.set('[data-hero]', { opacity: 1, y: 0 });
-        gsap.set('[data-hero-img]', { opacity: 1, scale: 1 });
-      } else {
-        tl.from('[data-hero]', { opacity: 0, y: 40, duration: 0.9, stagger: 0.15 }).from(
-          '[data-hero-img]',
-          { opacity: 0, scale: 0.92, duration: 1, ease: 'power2.out' },
-          '-=0.6'
-        );
-      }
+      tl.from('[data-hero]', {
+        opacity: 0,
+        y: reduce ? 0 : 40,
+        duration: reduce ? 0.5 : 0.9,
+        stagger: 0.15,
+      }).from(
+        '[data-hero-img]',
+        { opacity: 0, scale: reduce ? 1 : 0.92, duration: reduce ? 0.5 : 1, ease: 'power2.out' },
+        '-=0.6'
+      );
 
-      // Role text cycle (replaces react-type-animation)
-      if (!reduce) {
-        const cycle = gsap.timeline({ repeat: -1, delay: 1 });
+      // Typewriter cycle through the roles (restores the original typing title).
+      if (reduce) {
+        // Motion-sensitive users get static text, no looping.
+        roleRef.current.textContent = ROLES[0];
+      } else {
+        const type = gsap.timeline({ repeat: -1, delay: 1.2 });
         ROLES.forEach((role) => {
-          cycle
+          type
             .to(roleRef.current, {
-              duration: 0.4,
-              opacity: 0,
-              y: -12,
-              ease: 'power1.in',
-              onComplete: () => {
-                if (roleRef.current) roleRef.current.textContent = role;
-              },
+              duration: role.length * 0.06,
+              text: role,
+              ease: 'none',
             })
+            .to({}, { duration: 1.6 }) // hold
             .to(roleRef.current, {
-              duration: 0.4,
-              opacity: 1,
-              y: 0,
-              ease: 'power1.out',
-            })
-            .to({}, { duration: 1.6 });
+              duration: role.length * 0.03,
+              text: '',
+              ease: 'none',
+            });
         });
       }
     },
@@ -74,9 +75,8 @@ const Hero = () => {
             data-hero
             className="mt-5 text-xl text-white/70 sm:text-2xl lg:text-3xl"
           >
-            <span ref={roleRef} className="gradient-text font-semibold">
-              {ROLES[0]}
-            </span>
+            <span ref={roleRef} className="gradient-text font-semibold" />
+            <span className="type-cursor ml-1 font-light text-white/60">|</span>
           </p>
           <div data-hero className="mt-8 flex justify-center gap-4 md:justify-start">
             <a

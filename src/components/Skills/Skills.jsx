@@ -23,15 +23,15 @@ const Skills = () => {
 
   useGSAP(
     () => {
-      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       gsap.from('[data-skill]', {
         opacity: 0,
-        y: 30,
-        scale: 0.85,
-        duration: 0.6,
-        ease: 'back.out(1.6)',
-        stagger: 0.08,
-        scrollTrigger: { trigger: root.current, start: 'top 75%' },
+        y: reduce ? 0 : 30,
+        scale: reduce ? 1 : 0.85,
+        duration: reduce ? 0.4 : 0.6,
+        ease: reduce ? 'power1.out' : 'back.out(1.6)',
+        stagger: reduce ? 0.04 : 0.08,
+        scrollTrigger: { trigger: root.current, start: 'top 80%' },
       });
     },
     { scope: root }
