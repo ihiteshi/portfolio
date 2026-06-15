@@ -1,6 +1,7 @@
 import { FaGraduationCap } from 'react-icons/fa';
 import { SiMicrosoftazure, SiPowerbi } from 'react-icons/si';
 import { TbCertificate } from 'react-icons/tb';
+import HuggingFaceIcon from '../icons/HuggingFaceIcon.jsx';
 
 const EDUCATION = [
   {
@@ -28,6 +29,11 @@ const CERTS = [
     Icon: SiPowerbi,
     title: 'Power BI',
     href: 'https://learn.microsoft.com/en-us/users/hiteshchoudhary-6988/credentials/33275301692cc018',
+  },
+  {
+    Icon: HuggingFaceIcon,
+    title: 'Hugging Face — AI Agents',
+    href: 'https://huggingface.co/datasets/agents-course/certificates/resolve/main/certificates/iamhitesh/2026-03-03.png',
   },
 ];
 
