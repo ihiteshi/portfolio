@@ -4,7 +4,15 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { RiReactjsLine, RiJavascriptLine } from 'react-icons/ri';
 import { FaPython, FaNode } from 'react-icons/fa';
-import { SiDotnet, SiPowerbi, SiMicrosoftazure, SiAmazonaws, SiGit } from 'react-icons/si';
+import {
+  SiDotnet,
+  SiPowerbi,
+  SiMicrosoftazure,
+  SiAmazonaws,
+  SiGit,
+  SiOpenai,
+} from 'react-icons/si';
+import ClaudeIcon from '../icons/ClaudeIcon.jsx';
 
 const SKILLS = [
   { Icon: RiReactjsLine, label: 'React' },
@@ -16,6 +24,8 @@ const SKILLS = [
   { Icon: SiMicrosoftazure, label: 'Azure' },
   { Icon: SiAmazonaws, label: 'AWS' },
   { Icon: SiGit, label: 'Git' },
+  { Icon: ClaudeIcon, label: 'Claude Code' },
+  { Icon: SiOpenai, label: 'Codex' },
 ];
 
 const Skills = () => {
