@@ -8,7 +8,6 @@ import {
   SiDotnet,
   SiPowerbi,
   SiMicrosoftazure,
-  SiAmazonaws,
   SiGit,
   SiOpenai,
 } from 'react-icons/si';
@@ -22,7 +21,6 @@ const SKILLS = [
   { Icon: SiDotnet, label: '.NET' },
   { Icon: SiPowerbi, label: 'Power BI' },
   { Icon: SiMicrosoftazure, label: 'Azure' },
-  { Icon: SiAmazonaws, label: 'AWS' },
   { Icon: SiGit, label: 'Git' },
   { Icon: ClaudeIcon, label: 'Claude Code' },
   { Icon: SiOpenai, label: 'Codex' },
